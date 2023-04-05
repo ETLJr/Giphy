@@ -9,7 +9,7 @@ const $div = $('#gifDiv');
 
 $form.on('submit', async function getGif(e){
  e.preventDefault();
-   const newGif = await axios.get('http://api.giphy.com/v1/gifs/search', {params:{q: $text, api_key}});
+   const newGif = await axios.get('https://api.giphy.com/v1/gifs/search', {params:{q: $text.val(), api_key}});
    const idx = Math.floor(Math.random() * newGif.data.data.length);
     const randomGif = newGif.data.data[idx]; 
     console.log(randomGif)
