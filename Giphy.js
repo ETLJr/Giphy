@@ -6,6 +6,7 @@ const $text = $('#search');
 const $button = $('#submit');
 const $form = $('#gif');
 const $div = $('#gifDiv');
+const $clear= $('#clear')
 
 $form.on('submit', async function getGif(e){
  e.preventDefault();
@@ -13,7 +14,10 @@ $form.on('submit', async function getGif(e){
    const idx = Math.floor(Math.random() * newGif.data.data.length);
     const randomGif = newGif.data.data[idx]; 
     console.log(randomGif)
-     const img = $("<img>",{src: randomGif.images.orignal.url});
+     const img = $("<img>",{src: randomGif.images.original.url});
      img.appendTo($div);
-     
+     $clear.on('click', function(){
+        $div.empty();
+    })
 });
+
