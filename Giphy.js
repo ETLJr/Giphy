@@ -19,6 +19,7 @@ $form.on('submit', async function getGif(e){
      
 });
 
-$clear.on('click', function(){
+$clear.on('click', function(e){
+    e.preventDefault();
     $div.empty();
 })
