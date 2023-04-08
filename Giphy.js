@@ -16,8 +16,9 @@ $form.on('submit', async function getGif(e){
     console.log(randomGif)
      const img = $("<img>",{src: randomGif.images.original.url});
      img.appendTo($div);
-     $clear.on('click', function(){
-        $div.empty();
-    })
+     
 });
 
+$clear.on('click', function(){
+    $div.empty();
+})
